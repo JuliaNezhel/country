@@ -1,13 +1,12 @@
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
-import {store} from "../shared/model/store/store";
-import {Router} from "../pages/routing";
-
+import { Router } from '@/pages/routing'
+import { store } from '@/shared/model/store/store'
 
 export function App() {
-    return (
-        <Provider store={store}>
-            <Router/>
-        </Provider>
-    )
+  return (
+    <Provider store={store}>
+      <Router />
+    </Provider>
+  )
 }
