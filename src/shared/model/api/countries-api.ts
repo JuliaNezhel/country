@@ -17,8 +17,15 @@ export const countriesApi = createApi({
                 }),
                 providesTags: ['Countries'],
             }),
+            getCountry: builder.query<Root[], string>({
+                query: (country) => ({
+                    url: `/name/${country}`,
+                    method: 'GET',
+                }),
+                providesTags: ['Countries'],
+            }),
         }
     },
 })
 
-export const { useGetCountriesQuery } = countriesApi
+export const {useGetCountriesQuery, useGetCountryQuery} = countriesApi

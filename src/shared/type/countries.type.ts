@@ -1,3 +1,8 @@
+export interface ErrorDataType {
+    status: number
+    message: string
+}
+
 export interface Root {
     name: Name
     tld: string[]
@@ -238,9 +243,11 @@ export interface Car {
 export interface Flags {
     png: string
     svg: string
+    alt?: string
 }
 
-export interface CoatOfArms {}
+export interface CoatOfArms {
+}
 
 export interface CapitalInfo {
     latlng: number[]
