@@ -19,7 +19,7 @@ export const Country = () => {
       const errMsg = error.data as ErrorDataType
 
       if ('message' in errMsg) {
-        console.log(error)
+        // console.log(error)
 
         return (
           <>
