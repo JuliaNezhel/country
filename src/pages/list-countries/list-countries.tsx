@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom'
+
 import { useGetCountriesQuery } from '@/shared/model/api/countries-api'
+import { ResponsiveAppBar } from '@/widgets/header/header'
 import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import { styled } from '@mui/material/styles'
-import { Link } from 'react-router-dom'
-import { ResponsiveAppBar } from '@/widgets/header/header'
-import Container from '@mui/material/Container'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
+  color: theme.palette.text.secondary,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
 }))
 
 export const ListCountries = () => {
@@ -22,7 +23,7 @@ export const ListCountries = () => {
     <div>
       <ResponsiveAppBar />
       <Container>
-        <Box sx={{ width: '100%', m: 2 }}>
+        <Box sx={{ m: 2, width: '100%' }}>
           <Stack spacing={2}>
             {countries?.map(country => {
               return (

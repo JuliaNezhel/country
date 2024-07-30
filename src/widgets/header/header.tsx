@@ -1,28 +1,29 @@
+import { Link } from 'react-router-dom'
+
 import AppBar from '@mui/material/AppBar'
+import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
-import { Link } from 'react-router-dom'
 
 export const ResponsiveAppBar = () => {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position={'static'}>
+      <Container maxWidth={'xl'}>
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            component={'a'}
+            href={'#app-bar-with-responsive-menu'}
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              color: 'inherit',
+              display: { md: 'flex', xs: 'none' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              mr: 2,
               textDecoration: 'none',
             }}
+            variant={'h6'}
           >
             <Link to={'/'}>COUNTRIES</Link>
           </Typography>

@@ -1,13 +1,14 @@
 import { useParams } from 'react-router-dom'
+
 import { useGetCountryQuery } from '@/shared/model/api/countries-api'
-import { ResponsiveAppBar } from '@/widgets/header/header'
-import Container from '@mui/material/Container'
-import CardMedia from '@mui/material/CardMedia'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import CircularProgress from '@mui/material/CircularProgress'
-import Alert from '@mui/material/Alert'
 import { ErrorDataType } from '@/shared/type/countries.type'
+import { ResponsiveAppBar } from '@/widgets/header/header'
+import Alert from '@mui/material/Alert'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import CircularProgress from '@mui/material/CircularProgress'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
 
 export const Country = () => {
   const { country } = useParams<{ country: string }>()
@@ -16,12 +17,14 @@ export const Country = () => {
   if (error) {
     if ('data' in error) {
       const errMsg = error.data as ErrorDataType
+
       if ('message' in errMsg) {
         console.log(error)
+
         return (
           <>
             <ResponsiveAppBar />
-            <Alert variant="filled" severity="error">
+            <Alert severity={'error'} variant={'filled'}>
               {errMsg.message}
             </Alert>
           </>
@@ -40,16 +43,16 @@ export const Country = () => {
           data?.map(country => (
             <>
               <CardMedia
-                component="img"
-                height="300"
-                image={country.flags.svg}
                 alt={country.flags?.alt}
+                component={'img'}
+                height={'300'}
+                image={country.flags.svg}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography component={'div'} gutterBottom variant={'h5'}>
                   {country.name.common}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography color={'text.secondary'} variant={'body2'}>
                   {country.name.official}
                 </Typography>
               </CardContent>

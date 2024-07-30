@@ -1,15 +1,16 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
 import { Country } from './country/country'
 import { ListCountries } from './list-countries/list-countries'
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <ListCountries />,
+    path: '/',
   },
   {
-    path: '/:country',
     element: <Country />,
+    path: '/:country',
   },
 ])
 

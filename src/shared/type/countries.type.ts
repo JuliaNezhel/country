@@ -1,44 +1,44 @@
 export interface ErrorDataType {
-  status: number
   message: string
+  status: number
 }
 
 export interface Root {
-  name: Name
-  tld: string[]
-  cca2: string
-  ccn3: string
-  cca3: string
-  independent: boolean
-  status: string
-  unMember: boolean
-  currencies: Currencies
-  idd: Idd
-  capital: string[]
   altSpellings: string[]
-  region: string
-  languages: Languages
-  translations: Translations
-  latlng: number[]
-  landlocked: boolean
   area: number
+  capital: string[]
+  capitalInfo: CapitalInfo
+  car: Car
+  cca2: string
+  cca3: string
+  ccn3: string
+  coatOfArms: CoatOfArms
+  continents: string[]
+  currencies: Currencies
   demonyms: Demonyms
   flag: string
-  maps: Maps
-  population: number
-  car: Car
-  timezones: string[]
-  continents: string[]
   flags: Flags
-  coatOfArms: CoatOfArms
+  idd: Idd
+  independent: boolean
+  landlocked: boolean
+  languages: Languages
+  latlng: number[]
+  maps: Maps
+  name: Name
+  population: number
+  region: string
   startOfWeek: string
-  capitalInfo: CapitalInfo
+  status: string
+  timezones: string[]
+  tld: string[]
+  translations: Translations
+  unMember: boolean
 }
 
 export interface Name {
   common: string
-  official: string
   nativeName: NativeName
+  official: string
 }
 
 export interface NativeName {
@@ -46,8 +46,8 @@ export interface NativeName {
 }
 
 export interface Eng {
-  official: string
   common: string
+  official: string
 }
 
 export interface Currencies {
@@ -97,128 +97,128 @@ export interface Translations {
 }
 
 export interface Ara {
-  official: string
   common: string
+  official: string
 }
 
 export interface Bre {
-  official: string
   common: string
+  official: string
 }
 
 export interface Ces {
-  official: string
   common: string
+  official: string
 }
 
 export interface Cym {
-  official: string
   common: string
+  official: string
 }
 
 export interface Deu {
-  official: string
   common: string
+  official: string
 }
 
 export interface Est {
-  official: string
   common: string
+  official: string
 }
 
 export interface Fin {
-  official: string
   common: string
+  official: string
 }
 
 export interface Fra {
-  official: string
   common: string
+  official: string
 }
 
 export interface Hrv {
-  official: string
   common: string
+  official: string
 }
 
 export interface Hun {
-  official: string
   common: string
+  official: string
 }
 
 export interface Ita {
-  official: string
   common: string
+  official: string
 }
 
 export interface Jpn {
-  official: string
   common: string
+  official: string
 }
 
 export interface Kor {
-  official: string
   common: string
+  official: string
 }
 
 export interface Nld {
-  official: string
   common: string
+  official: string
 }
 
 export interface Per {
-  official: string
   common: string
+  official: string
 }
 
 export interface Pol {
-  official: string
   common: string
+  official: string
 }
 
 export interface Por {
-  official: string
   common: string
+  official: string
 }
 
 export interface Rus {
-  official: string
   common: string
+  official: string
 }
 
 export interface Slk {
-  official: string
   common: string
+  official: string
 }
 
 export interface Spa {
-  official: string
   common: string
+  official: string
 }
 
 export interface Srp {
-  official: string
   common: string
+  official: string
 }
 
 export interface Swe {
-  official: string
   common: string
+  official: string
 }
 
 export interface Tur {
-  official: string
   common: string
+  official: string
 }
 
 export interface Urd {
-  official: string
   common: string
+  official: string
 }
 
 export interface Zho {
-  official: string
   common: string
+  official: string
 }
 
 export interface Demonyms {
@@ -236,14 +236,14 @@ export interface Maps {
 }
 
 export interface Car {
-  signs: string[]
   side: string
+  signs: string[]
 }
 
 export interface Flags {
+  alt?: string
   png: string
   svg: string
-  alt?: string
 }
 
 export interface CoatOfArms {}
