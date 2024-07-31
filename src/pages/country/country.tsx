@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 
+import { Item } from '@/entities/ui/item'
 import { useGetCountryQuery } from '@/shared/model/api/countries-api'
 import { ErrorDataType } from '@/shared/type/countries.type'
 import { ResponsiveAppBar } from '@/widgets/header/header'
@@ -42,20 +43,22 @@ export const Country = () => {
         ) : (
           data?.map(country => (
             <>
-              <CardMedia
-                alt={country.flags?.alt}
-                component={'img'}
-                height={'300'}
-                image={country.flags.svg}
-              />
-              <CardContent>
-                <Typography component={'div'} gutterBottom variant={'h5'}>
-                  {country.name.common}
-                </Typography>
-                <Typography color={'text.secondary'} variant={'body2'}>
-                  {country.name.official}
-                </Typography>
-              </CardContent>
+              <Item>
+                <CardMedia
+                  alt={country.flags?.alt}
+                  component={'img'}
+                  height={'300'}
+                  image={country.flags.svg}
+                />
+                <CardContent>
+                  <Typography component={'div'} gutterBottom variant={'h5'}>
+                    {country.name.common}
+                  </Typography>
+                  <Typography color={'text.secondary'} variant={'body2'}>
+                    {country.name.official}
+                  </Typography>
+                </CardContent>
+              </Item>
             </>
           ))
         )}
