@@ -28,7 +28,9 @@ export const ListCountries = () => {
             {countries?.map(country => {
               return (
                 <Item key={country.name.common}>
-                  <Link to={`${country.name.common}`}>{country.name.official}</Link>
+                  <Link style={{ color: 'black' }} to={`${country.name.common}`}>
+                    {country.name.official}
+                  </Link>
                 </Item>
               )
             })}
